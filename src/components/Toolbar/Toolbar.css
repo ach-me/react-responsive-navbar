@@ -1,4 +1,4 @@
-.toolbar {
+.Toolbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,45 +7,58 @@
   height: 56px;
 }
 
-.toolbar__navigation {
+.Toolbar-Navigation {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   height: 100%;
   padding: 0 1rem;
 }
 
-.toolbar__logo {
+.Toolbar-Logo {
   margin-left: 1rem;
 }
 
-.toolbar__logo a {
+.Toolbar-Link {
   color: white;
   text-decoration: none;
+}
+
+.Toolbar-Logo-Link {
   font-size: 1.5rem;
 }
 
-.spacer {
+.Toolbar-Spacer {
   flex: 1;
 }
 
-.toolbar__navigation-items ul {
+.Toolbar-NavigationItems ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.toolbar__navigation-items li {
+.Toolbar-NavigationItems li {
   padding: 0 .5rem;
 }
 
-.toolbar__navigation-items a {
-  color: white;
-  text-decoration: none;
+.Toolbar-NavigationItems-Link:active,
+.Toolbar-NavigationItems-Link:hover {
+  color: #fa923f
 }
 
-.toolbar__navigation-items a:active,
-.toolbar__navigation-items a:hover {
-  color: #fa923f
+@media (max-width: 768px) {
+  .Toolbar-NavigationItems {
+    display: none;
+  }
+}
+
+@media (min-width: 796px) {
+  .Toolbar-ToggleButton {
+    display: none;
+  }
+
+  .Toolbar-Logo {
+    margin-left: 0;
+  }
 }
